@@ -28,9 +28,27 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain what a token is used for.
+Webservices uses JWT jason web token , these are issued by the server - containing encrypted text. This is then stored by client side local storage.
+The client side application then adds this token as the authorization header to access/direct the protected resources/pages.The server issues the token, and also read the token to decide data transfer authentication. 
+
 2. What steps can you take in your web apps to keep your data secure?
+   We use the Protected  routes - for those resoures in the application that 
+   we want to render only for authenticated users. 
+   When API calls are made, these server issued tokens needs to be sent along to ensure secure data transfer. 
+
 3. Describe how web servers work.
+The software is hosted on the web server, 
+the browser requests the file via HTTP. When the request reaches the correct hardware webserver, the software HTTP server accepts the request, and then it finds the requested document and send it back  to the browser. 
+(referred MDN)
+A web server store, process and deliver web pages to clients. The communication between client and server takes place using the Hypertext Transfer Protocol (HTTP).
+My Note:
+https://www.geeksforgeeks.org/web-servers-work/
+
 4. Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+C create .post  create a new resource (usually with data as payload)
+R read   .get   read a resource   (can use id in the url)
+U update .put   update a resource (usually with data as payload and id in url)
+D delete .delete  delete a resource  (usually with id in the url)
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
